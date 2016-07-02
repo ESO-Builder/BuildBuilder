@@ -5,7 +5,7 @@ var app = express();
 var mongoose = require('mongoose');
 
 console.log(__dirname);
-var teste = require(__dirname+'/controllers/teste');
+var teste = require('./controllers/teste');
 var url = '';
 /**
  *  Define the sample application.
@@ -28,7 +28,7 @@ var SampleApp = function() {
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
         self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-        url = 'mongodb://localhost:27017/testePessoa';
+        url = 'mongodb://localhost:27017/buildbuilder';
 
         if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
           connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +

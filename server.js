@@ -28,14 +28,23 @@ var SampleApp = function() {
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
         self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-        url = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/dbESO";
+        url = 'mongodb://localhost:27017/testePessoa';
+
+        if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
+          connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+          process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+          process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+          process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+          process.env.OPENSHIFT_APP_NAME;
+
+          url = connection_string;
+        }
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
             //  allows us to run/test the app locally.
             console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
             self.ipaddress = "127.0.0.1";
-            url = 'mongodb://localhost:27017/testePessoa';
         }
     };
 

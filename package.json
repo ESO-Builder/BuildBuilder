@@ -27,6 +27,9 @@
     "mongodb": "^1.4.4",
     "mongoose": "^4.5.3"
   },
+  "scripts":{
+    "start": "node server.js"
+  },
   "devDependencies": {},
   "bundleDependencies": [],
   "private": true,

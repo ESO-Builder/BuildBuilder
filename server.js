@@ -3,8 +3,10 @@
 var express = require('express');
 var fs      = require('fs');
 var app = express();
+var mongoose = require('mongoose');
 
 var teste = require('./controllers/teste');
+var url = 'mongodb://localhost:27017/testePessoa';
 /**
  *  Define the sample application.
  */
@@ -99,8 +101,6 @@ var SampleApp = function() {
         self.app.use("/teste", teste);
 
         // mongodb
-        var mongoose = require('mongoose');
-        var url = 'mongodb://localhost:27017/testePessoa';
         mongoose.connect(url);
     };
 

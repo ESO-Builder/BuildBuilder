@@ -5,7 +5,7 @@ var app = express();
 var mongoose = require('mongoose');
 
 var teste = require('./controllers/teste');
-var url = 'mongodb://localhost:27017/testePessoa';
+var url = '';
 /**
  *  Define the sample application.
  */
@@ -27,11 +27,14 @@ var SampleApp = function() {
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
         self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
+        url = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/dbESO";
+
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
             //  allows us to run/test the app locally.
             console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
             self.ipaddress = "127.0.0.1";
+            url = 'mongodb://localhost:27017/testePessoa';
         }
     };
 

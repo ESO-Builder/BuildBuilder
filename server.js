@@ -4,7 +4,8 @@ var fs      = require('fs');
 var app = express();
 var mongoose = require('mongoose');
 
-var teste = require('./controllers/teste');
+console.log(__dirname);
+var teste = require(__dirname+'/controllers/teste');
 var url = '';
 /**
  *  Define the sample application.

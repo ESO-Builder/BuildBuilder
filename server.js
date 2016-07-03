@@ -15,7 +15,7 @@ var teste = require('./Controllers/teste');
 
 // usa configuracoes
 app.use(body_parser.json());
-app.use(body_parser.urlencoded({extend: false}));
+app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
 
 // usa rotas

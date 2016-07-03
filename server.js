@@ -17,6 +17,7 @@ var teste = require('./Controllers/teste');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
+app.use(express.static('public'));
 
 // usa rotas
 app.use('/', home);

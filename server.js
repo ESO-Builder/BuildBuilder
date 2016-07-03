@@ -8,9 +8,11 @@ var url = require('./config/server');
 var db = require('./config/db');
 
 // load de rotas
+var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
 
 // usa rotas
+app.use('/', home);
 app.use('/teste', teste);
 
 // usa configuracoes

@@ -18,6 +18,7 @@ app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
 app.use(express.static('public'));
+app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
 // usa rotas
 app.use('/', home);

@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "build-builder-eso",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -9,14 +9,14 @@
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
+    "name": "Enzo e Igor",
     "email": "ramr@example.org",
     "url": "http://www.openshift.com/"
   },
   "homepage": "http://www.openshift.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/ESO-Builder/BuildBuilder"
   },
   "engines": {
     "node": ">= 0.6.0",
@@ -27,12 +27,36 @@
     "cookie-parser": "^1.4.3",
     "express": "~4.13.4",
     "mongodb": "^1.4.4",
-    "mongoose": "^4.5.3"
+    "mongoose": "^4.5.3",
+
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/forms": "0.2.0",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.1",
+    "@angular/router-deprecated": "2.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.4",
+
+    "systemjs": "0.19.27",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12",
+    "angular2-in-memory-web-api": "0.0.14",
+    "bootstrap": "^3.3.6"
   },
   "scripts": {
     "start": "node server.js"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings":"^1.0.4"    
+  },
   "bundleDependencies": [],
   "private": true,
   "main": "server.js"

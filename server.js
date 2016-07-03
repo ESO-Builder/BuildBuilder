@@ -1,6 +1,8 @@
 // dependencias
 var express = require('express');
 var mongoose = require('mongoose');
+var body_parser = require('body-parser');
+var cookie_parser = require('cookie-parser');
 var app = express();
 
 // load de configuracoes
@@ -10,6 +12,11 @@ var db = require('./config/db');
 // load de rotas
 var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
+
+// usa configuracoes
+app.use(body_parser.json());
+app.use(body_parser.urlenconded({extend: false}));
+app.use(cookie_parser());
 
 // usa rotas
 app.use('/', home);

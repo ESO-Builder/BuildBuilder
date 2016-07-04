@@ -1,0 +1,32 @@
+/*color: #A9A9A9; cor do texto*/
+body {
+    margin: 0;
+    background-color: #262626;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #202020;
+    background-image: -webkit-linear-gradient(top,#282828,#191919);
+    background-image: linear-gradient(top,#282828,#191919);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#282828),to(#191919));
+    line-height: 40px;
+}
+
+#menu .titulo {
+    font-size: 18pt;
+    color: #E0E0E0;
+    padding-left: 15px;
+}
+
+#corpo {
+    width: 1200px;
+    left: 50%;
+    margin-left: -620px;
+    position: relative;
+    border: 1px solid green;
+    padding: 20px;
+}

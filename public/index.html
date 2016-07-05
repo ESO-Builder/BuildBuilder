@@ -19,16 +19,144 @@
     </script>
   </head>
   <body>
-      <div id="menu">
+      <div id="menu"> <div style="width: 100%;padding: 10px; height: 40px;">
           <div style="float: left;">
-              <img width="40px" height="40px" src="/image/logo.png" />
+             
+                <img width="40px" height="40px" src="/image/logo.png" />
+            
           </div>
           <div>
             <span class="titulo">ESO - Build Builder</span>
-          </div>
+          </div>  </div>
       </div>
       <div id="corpo">
+
+          <div class="peca">
+              <div class="peca-tipo">
+                  (heavy - armor)
+              </div>
+              <div class="peca-titulo">
+                    Willow's Path Set
+              </div>
+              <div class="peca-nivel">
+                    Armor: 1386 - Level: 50 - CP : 160
+              </div>
+              <div class="peca-encantamento">
+                    Maximum Magicka enchantment
+                    <div>Adds 938 Maximum Magicka</div>
+              </div>
+
+              <div class="peca-trait">
+                    Infused
+                    <div>Increase armor enchantment effect by 17%</div>
+              </div>
+
+            <div class="peca-set">
+                    Part of the set (0/5 items)
+                <ul class="set-items">
+                    <li>(2 items) Adds 1064 Max Health</li>
+                    <li>(3 items) Adds 1935 Physical Resistance</li>
+                    <li>(4 items) Adds Adds 967 Max Stamina</li>
+                    <li>(5 items) Rolling through enemies deals 1932 Physical Damage and knocks them down.</li>
+                </ul>
+            </div>
+          </div>
+          
+          <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+         <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+         <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+         <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+         <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+         <div class="peca">
+                  <h3>not selected</h3>
+        </div>
+
+
           <my-app>Loading...</my-app>
       </div>
   </body>
+
+  <style>
+.peca {
+    width: 240px;
+    border: 1px solid;
+    height: 340px;
+    margin-left: 15px;
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+}
+      
+
+      .peca-tipo {
+          font-size: 8pt;
+          margin-bottom: 5px;
+      }
+
+      .peca-titulo {
+          font-size: 12pt;
+          font-weight: bold;
+          margin-bottom: 5px;
+      }
+
+      .peca-nivel {
+          font-size: 10pt;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+
+      .peca-encantamento {
+          font-size: 9pt;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+
+      .peca-encantamento > div {
+           font-weight: normal;
+       }
+
+
+      .peca-set {
+          font-size: 9pt;
+          font-weight: bold;
+      }
+
+      .peca-set > ul {
+          font-size: 9pt;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          
+      }
+
+      .peca-set > ul > li {
+          margin-bottom: 5px;
+          font-weight: normal;
+      }
+
+    .peca-set > ul > li:first-child {
+        margin-top: 5px;
+    }
+       
+
+       .peca-trait {
+          font-size: 9pt;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+
+      .peca-trait > div {
+           font-weight: normal;
+       }
+  </style>
 </html>

@@ -13,6 +13,9 @@ var db = require('./config/db');
 var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
 
+// load de seeds
+var seed_atributos = require('./seeds/seedAtributo');
+
 // usa configuracoes
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
@@ -26,6 +29,9 @@ app.use('/teste', teste);
 
 // usa configuracoes
 mongoose.connect(db.url);
+
+// seeds
+seed_atributos();
 
 // starta servdidor
 app.listen(url.port, url.ip, function(){
